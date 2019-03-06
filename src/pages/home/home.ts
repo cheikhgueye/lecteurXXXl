@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { NFC } from "@ionic-native/nfc";
+import { NFC, Ndef } from '@ionic-native/nfc/ngx';
 import { MainProvider } from '../../providers/main/main';
 import { Etudiant } from '../../providers/main/etudiant';
 
