@@ -1,0 +1,7 @@
+{
+  "name": "Damier",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

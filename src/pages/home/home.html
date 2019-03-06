@@ -1,0 +1,49 @@
+
+
+<ion-content >
+  <ion-list>
+    <ion-item >
+        <ion-grid class="tabl">
+          <ion-row >
+              <ion-col  col-1 class="noborder" *ngFor="let i of score1"><img src="assets/imgs/marron.jpg"  class="gain" > </ion-col>
+
+
+
+
+
+          </ion-row>
+
+
+        </ion-grid>
+        </ion-item>
+    <ion-item >
+  <ion-grid>
+    <ion-row  *ngFor="let i of tab">
+      <ion-col *ngFor="let j of i" width-10>
+ <img src="assets/imgs/noire.jpg"  *ngIf="j?.team==1" (click)="cli(j?.row,j?.id,j?.team)" class="t1">
+<img src="assets/imgs/marron.jpg"   *ngIf="j?.team==2   " (click)="cli(j?.row,j?.id,j?.team)" class="t2">
+
+
+      <button *ngIf="j?.team==-1 " (click)="cli(j?.row,j?.id,j?.team)" class="t3"></button>
+
+      </ion-col>
+
+    </ion-row>
+  </ion-grid></ion-item>
+  <ion-item >
+      <ion-grid class="tabl">
+        <ion-row >
+
+  <ion-col col-1 class="noborder" *ngFor="let i of score2"><img src="assets/imgs/noire.jpg" class="gain" > </ion-col>
+
+
+
+        </ion-row>
+
+
+
+      </ion-grid>
+      </ion-item>
+</ion-list>
+
+</ion-content>
