@@ -1,90 +1,39 @@
 page-home {
 
+  ion-header{
+    background-color: rgb(3, 235, 138);
+    color: blanchedalmond;
+  }
+    .granted{
+      background-color: green;
+      color: blanchedalmond;
+  }
+  .denied{
+      background-color: red;
+      color: blanchedalmond;
 
-  .scroll-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  }
+
+
+}
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-  .img{
-   width: 100%;
-   height:100% ;
-
-  }
-  .noborder{
-    border: solid 0px black;
-    width: 100%;
-  }
-
-  .t1{
+main {
+  flex: 1;
+}
 
 
-    box-shadow: 5px 5px 10px;
+footer{
 
-    width: 100%;
-    height:100%;
-  }
-  .t2{
-    box-shadow: 5px 5px 10px;
-    width: 100%;
-    height: 100%;
-  }
-  .t3{
-    background-color:#fcdec1;
-
-    width: 100%;
-    height: 100%;
-  }
-  ion-col {
-    border: solid 3px rgb(85, 84, 84);
-    height: 80px;
-    width: 90px
-
-  }
-  ion-list{
-
-    border: solid 11px #985717 ;
-    height: auto;
-    width: auto
-
-  }
-  .tabl{
-    ion-row{
-      ion-col{
-        height: 40px;
-        margin-top: -7px;
-        width: 40px;
-
-      }
-
-
-    }
-    height: 50px;
-    border: solid 6px #fac997;
-    border-radius: 6px;
-    background-color:white;
-
-
-
-
-  }
-
-  .gain{
-    width: 100%;
-    height: 80%;
-
-  }
-  .ilt{
-    border: solid 1px rgb(0, 0, 0);
-
-  }
-  ion-grid{
-    padding: 0ex;
-    background-color:#fcdec1;
-    margin: 0ex
-  }
-
-
-
+  width: 100%
+}
+.p{
+  color: white;text-emphasis: none;text-align: center
+}
+p{
+  text-align: center
 }

@@ -1,49 +1,45 @@
 
-
-<ion-content >
-  <ion-list>
-    <ion-item >
-        <ion-grid class="tabl">
-          <ion-row >
-              <ion-col  col-1 class="noborder" *ngFor="let i of score1"><img src="assets/imgs/marron.jpg"  class="gain" > </ion-col>
-
+<ion-header>
+  <h1>Bienvenue sur Nopale</h1>
+  <p>Passez votre Carte pour payer  <ion-icon name="logo-rss"></ion-icon>
+  </p>
+</ion-header>
+<ion-content>
 
 
 
+  <ion-card *ngIf="scanned && granted " class="granted" style="margin-top:150px;height: 100px;font: 65px">
+    <ion-card-header>
 
-          </ion-row>
+    </ion-card-header>
+    <ion-card-content>
+      payemement valide!!  <ion-icon name="checkmark-circle"></ion-icon>
+      <p class="p">Bon appettit   <ion-icon name="restaurant"></ion-icon></p>
 
+    </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="scanned && !granted " class="denied">
+      <ion-card-header>
+          <ion-icon name="warning"></ion-icon>
+          payemement non non valide
+      </ion-card-header>
+      <ion-card-content>
+     veuillez recharger votre compte svp
+      </ion-card-content>
+  </ion-card>
+  <!--<ion-card *ngIf="scanned && !carteValid" class="denied">
+    <ion-card-header>
+   cette carte n est pas valide
+    </ion-card-header>
+    <ion-card-content>
+      <p>  <ion-icon name="warning"></ion-icon>
+        Vous avez pas le droit d effectuer cette action!!.</p>
+    </ion-card-content>
+  </ion-card>-->
 
-        </ion-grid>
-        </ion-item>
-    <ion-item >
-  <ion-grid>
-    <ion-row  *ngFor="let i of tab">
-      <ion-col *ngFor="let j of i" width-10>
- <img src="assets/imgs/noire.jpg"  *ngIf="j?.team==1" (click)="cli(j?.row,j?.id,j?.team)" class="t1">
-<img src="assets/imgs/marron.jpg"   *ngIf="j?.team==2   " (click)="cli(j?.row,j?.id,j?.team)" class="t2">
+<ion-footer>
 
+    <div class="footer-copyright text-center py-3 col-md-12 " style="color: white;margin-top: 5px;background-color: black;" >©Copyright 2018 Tous droits résérvés NOPALE
+      </div>
 
-      <button *ngIf="j?.team==-1 " (click)="cli(j?.row,j?.id,j?.team)" class="t3"></button>
-
-      </ion-col>
-
-    </ion-row>
-  </ion-grid></ion-item>
-  <ion-item >
-      <ion-grid class="tabl">
-        <ion-row >
-
-  <ion-col col-1 class="noborder" *ngFor="let i of score2"><img src="assets/imgs/noire.jpg" class="gain" > </ion-col>
-
-
-
-        </ion-row>
-
-
-
-      </ion-grid>
-      </ion-item>
-</ion-list>
-
-</ion-content>
+</ion-footer>
